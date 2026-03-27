@@ -9,6 +9,8 @@ export default {
   timeoutMS: 240_000,
   timeoutFactor: 3,
   coverageAnalysis: 'perTest',
+  incremental: true,
+  incrementalFile: '.stryker-tmp/incremental.json',
   mutate: [
     'src/**/*.ts',
     '!src/**/*.spec.ts',
