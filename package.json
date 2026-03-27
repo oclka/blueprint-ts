@@ -50,7 +50,8 @@
     "check:all": "pnpm check:types && pnpm lint:fix && pnpm check:secrets && pnpm audit --audit-level=high && pnpm build && pnpm check:pkg && pnpm check:size && true",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "knip": "knip"
   },
   "packageManager": "pnpm@10.30.3",
   "devDependencies": {
@@ -65,6 +66,7 @@
     "eslint-plugin-tsdoc": "^0.5.2",
     "eslint-plugin-unicorn": "^63.0.0",
     "globals": "^17.4.0",
+    "knip": "^6.0.6",
     "prettier": "^3.8.1",
     "publint": "^0.3.18",
     "size-limit": "^12.0.1",
