@@ -1,6 +1,6 @@
 {
   "name": "@oclka/blueprint-ts",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The definitive blueprint for building battle-tested, production-ready TypeScript libraries.",
   "author": {
     "name": "OCLKA",
