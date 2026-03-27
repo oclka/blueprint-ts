@@ -46,7 +46,8 @@
     "check:types": "tsc --noEmit",
     "check:pkg": "publint && attw --pack",
     "check:size": "size-limit",
-    "check:all": "pnpm check:types && pnpm lint:fix && pnpm build && pnpm check:pkg && pnpm check:size && true",
+    "check:secrets": "if command -v gitleaks > /dev/null; then gitleaks protect --staged --verbose; else echo '⚠️ gitleaks is not installed locally. Skipping secret scan.'; fi",
+    "check:all": "pnpm check:types && pnpm lint:fix && pnpm check:secrets && pnpm audit --audit-level=high && pnpm build && pnpm check:pkg && pnpm check:size && true",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
