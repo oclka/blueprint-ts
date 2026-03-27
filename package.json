@@ -43,11 +43,14 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest run --watch",
+    "test:coverage": "vitest run --coverage",
     "check:types": "tsc --noEmit",
     "check:pkg": "publint && attw --pack",
     "check:size": "size-limit",
     "check:secrets": "if command -v gitleaks > /dev/null; then gitleaks protect --staged --verbose; else echo '⚠️ gitleaks is not installed locally. Skipping secret scan.'; fi",
-    "check:all": "pnpm check:types && pnpm lint:fix && pnpm check:secrets && pnpm audit --audit-level=high && pnpm build && pnpm check:pkg && pnpm check:size && true",
+    "check:all": "pnpm check:types && pnpm lint:fix && pnpm check:secrets && pnpm audit --audit-level=high && pnpm test:coverage && pnpm build && pnpm check:pkg && pnpm check:size && true",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -58,6 +61,7 @@
     "@arethetypeswrong/cli": "^0.18.2",
     "@size-limit/preset-small-lib": "^12.0.1",
     "@types/node": "^25.5.0",
+    "@vitest/coverage-v8": "^4.1.2",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-promise": "^7.2.1",
@@ -73,6 +77,7 @@
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
-    "typescript-eslint": "^8.57.2"
+    "typescript-eslint": "^8.57.2",
+    "vitest": "^4.1.2"
   }
 }
