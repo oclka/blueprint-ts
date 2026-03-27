@@ -1,0 +1,28 @@
+{
+  "name": "@oclka/blueprint-ts",
+  "version": "0.0.0",
+  "description": "The definitive blueprint for building battle-tested, production-ready TypeScript libraries.",
+  "author": {
+    "name": "OCLKA",
+    "email": "bonjour@olcka.dev",
+    "url": "https://oclka.dev"
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "typescript",
+    "blueprint",
+    "boilerplate",
+    "library",
+    "template",
+    "starter",
+    "dx",
+    "best-practices",
+    "production-ready",
+    "battle-tested"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
