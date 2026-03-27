@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "tags": ["-lintignore"],
+  "ignore": ["commitlint.config.mjs"],
+  "ignoreBinaries": ["gitleaks"],
+  "ignoreDependencies": [
+    "@commitlint/config-conventional",
+    "@stryker-mutator/api"
+  ]
+}
